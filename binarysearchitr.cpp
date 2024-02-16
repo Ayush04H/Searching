@@ -1,4 +1,4 @@
-//Binary searh using the iterative approach
+//Binary searh using the iterative approach O(n)
 #include<bits/stdc++.h>
 using namespace std;
 int binarysearch(vector<int> a,int x){
