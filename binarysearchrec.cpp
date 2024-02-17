@@ -20,7 +20,7 @@ int binarysearch(vector<int> a, int l, int h ,int x){
 int main(){
     vector<int> a={1,2,3,5,8,9,6,3,2,55,44};
     sort(a.begin(),a.end());
-    int x=8;
+    int x=55;
     int l=0,h=a.size()-1;
     cout<<binarysearch(a,l,h,x);
 }
