@@ -1,6 +1,6 @@
  #include<bits/stdc++.h>
  using namespace std;
- long long int binarysearch(int n) {
+ long long int intsqrt(int n) {
         
         int s = 0;
         int e = n;
@@ -30,11 +30,23 @@
 
 int floorSqrt(int n)
 {
-    binarysearch(n);
+    intsqrt(n);
+}
+double sqrtprecision(int n,int p,int tempsol){
+    double fc=1;
+    double ans=tempsol;
+    for(int i=0;i<p;i++){
+        fc=fc/10;
+        for(double j=ans;j*j<n;j=j+fc){
+            ans=j;
+        }
+    }
+    return ans;
 }
 int main(){
-    cout<<floorSqrt(36);
-    cout<<floorSqrt(81);
-    cout<<floorSqrt(4);
-    cout<<floorSqrt(1);
+    int n;
+    cout<<"Enter the value to be squar rooted"<<endl;
+    cin>>n;
+    int tempsol=floorSqrt(n);
+    cout<<"The square root of the number will be "<<sqrtprecision(n,3,tempsol)<<"\n";
 }
